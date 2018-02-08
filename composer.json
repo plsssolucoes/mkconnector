@@ -1,0 +1,19 @@
+{
+    "name": "plss/mkconnector",
+    "description": "Pacote para Aplicacṍes laravel realizarem a conexão com o Mikrotik através da api php para RouteOS.",
+    "authors": [
+        {
+            "name": "João Henrique Moretti Pellissari",
+            "email": "pellissari.joao@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+	    "laravel/framework": "5.5.*"
+    },
+    "autoload": {
+	    "psr-4": {
+	        "PLSS\\MKConnector\\": "src/"
+    	}
+    }
+}
