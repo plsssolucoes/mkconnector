@@ -13,7 +13,9 @@ class MKConnectorServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+	    $this->publishes([
+		    __DIR__.'/config/mk-connect.php' => config_path('mk-connect.php'),
+	    ]);
     }
 
     /**
