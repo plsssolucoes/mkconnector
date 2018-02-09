@@ -1,0 +1,6 @@
+{
+    "name": "mikrotik/pear2",
+    "description": "PHP api to connect with mikrotik",
+    "type": "library",
+    "require": {}
+}

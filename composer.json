@@ -13,7 +13,8 @@
     },
     "autoload": {
 	    "psr-4": {
-	        "PLSS\\MKConnector\\": "src/"
+	        "PLSS\\MKConnector\\": "src/",
+            "PEAR2\\": "src/vendor/mikrotik/PEAR2/"
     	}
     }
 }
