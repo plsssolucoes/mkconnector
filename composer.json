@@ -16,5 +16,15 @@
 	        "PLSS\\MKConnector\\": "src/",
             "PEAR2\\": "src/vendor/mikrotik/PEAR2/"
     	}
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PLSS\\MKConnector\\MKConnectorServiceProvider"
+            ],
+            "aliases": {
+                "MKConnector": "PLSS\\MKConnector\\Facades\\MKConnectorFacade"
+            }
+        }
     }
 }

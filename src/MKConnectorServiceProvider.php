@@ -4,7 +4,7 @@ namespace PLSS\MKConnector;
 
 use Illuminate\Support\ServiceProvider;
 
-class AppServiceProvider extends ServiceProvider
+class MKConnectorServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
