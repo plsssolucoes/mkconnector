@@ -23,7 +23,8 @@
                 "PLSS\\MKConnector\\MKConnectorServiceProvider"
             ],
             "aliases": {
-                "MKConnector": "PLSS\\MKConnector\\Facades\\MKConnectorFacade"
+                "MKConnector": "PLSS\\MKConnector\\Facades\\MKConnectorFacade",
+                "MKConnectorFacebookLogin": "PLSS\\MKConnector\\Facades\\MKConnectorFacebookLloginFacade"
             }
         }
     }
