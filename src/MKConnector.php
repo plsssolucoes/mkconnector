@@ -16,22 +16,10 @@ class MKConnector
 	 */
 	public $mkconnection;
 
-	/*
-	 * Variveis contendo respectivamente ip, usuario e senha para conexao com MK.
-	 */
-	private $mk_ip;
-	private $mk_user;
-	private $mk_password;
+	public function connect($connection) {
 
-	public function __construct() {
-		$this->mk_ip = config('mk-connect.mk-ip');
-		$this->mk_user = config('mk-connect.mk-user');
-		$this->mk_password = config('mk-connect.mk-password');
-	}
-
-	public function connect() {
 		try {
-			$this->mkconnection = new Client($this->mk_ip, $this->mk_user, $this->mk_password);
+			$this->mkconnection = $this->getConnection($connection);
 		} catch (DataFlowException $e) {
 			throw new MKConnectorInvalidCredentials();
 		} catch (SocketException $e) {
@@ -40,6 +28,16 @@ class MKConnector
 
 
 		return $this->mkconnection;
+	}
+
+	private function getConnection($connection) {
+		if ($connection == 'pppoe') {
+			return (new Client(config('mk-connect.connections.pppoe.mk-ip'), config('mk-connect.connections.pppoe.mk-user'), config('mk-connect.connections.pppoe.mk-password')));
+		} else if ($connection == 'hotspot') {
+			return (new Client(config('mk-connect.connections.hotspot.mk-ip'), config('mk-connect.connections.hotspot.mk-user'), config('mk-connect.connections.hotspot.mk-password')));
+		} else {
+			throw new MKConnectorInvalidConnection();
+		}
 	}
 
 	public function setRequest($command) {
