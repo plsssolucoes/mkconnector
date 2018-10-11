@@ -6,6 +6,7 @@ use PEAR2\Net\RouterOS\Client;
 use PEAR2\Net\RouterOS\SocketException;
 use PEAR2\Net\RouterOS\DataFlowException;
 use PEAR2\Net\RouterOS\Request as MKRequest;
+use PLSS\MKConnector\Exceptions\MKConnectorInvalidConnection;
 use PLSS\MKConnector\Exceptions\MKConnectorConnectionTimeout;
 use PLSS\MKConnector\Exceptions\MKConnectorInvalidCredentials;
 
